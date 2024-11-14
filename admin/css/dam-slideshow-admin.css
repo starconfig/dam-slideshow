@@ -1,1 +1,18 @@
- 
+/**
+ * File: /dam-slideshow/admin/css/dam-slideshow-admin.css
+ */
+.dam-slideshow-editor {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.slide-editor {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e2e4e7;
+}
+
+.components-button {
+    margin: 5px;
+}
