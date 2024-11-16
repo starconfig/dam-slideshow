@@ -1,8 +1,8 @@
+<?php
  
 /**
  * File: /dam-slideshow/public/class-dam-slideshow-public.php
  */
-<?php
 class Dam_Slideshow_Public {
     private $plugin_name;
     private $version;

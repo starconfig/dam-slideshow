@@ -1,7 +1,8 @@
+<?php
  /**
  * File: /dam-slideshow/public/partials/dam-slideshow-public-display.php
  */
-?>
+
 <div class="dam-slideshow swiper">
     <div class="swiper-wrapper">
         <?php foreach ($attributes['slides'] as $slide): ?>

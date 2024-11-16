@@ -1,8 +1,7 @@
- 
+<?php
 /**
  * File: /dam-slideshow/includes/class-dam-slideshow.php
  */
-<?php
 class Dam_Slideshow {
     protected $loader;
     protected $plugin_name;

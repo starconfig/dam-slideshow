@@ -1,8 +1,7 @@
- 
+<?php
 /**
  * File: /dam-slideshow/includes/class-dam-slideshow-loader.php
  */
-<?php
 class Dam_Slideshow_Loader {
     protected $actions;
     protected $filters;

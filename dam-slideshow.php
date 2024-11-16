@@ -1,8 +1,4 @@
- 
-/**
- * File: /dam-slideshow/dam-slideshow.php
- */
-<?php
+ <?php
 /**
  * Plugin Name: Dam Slideshow
  * Description: A simple slideshow plugin with heading, paragraph, button, and background image
@@ -11,6 +7,8 @@
  * Text Domain: dam-slideshow
  * Domain Path: /languages
  * License: GPL v2 or later
+ /**
+ * File: /dam-slideshow/dam-slideshow.php
  */
 
 if (!defined('ABSPATH')) {
