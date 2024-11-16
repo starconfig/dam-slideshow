@@ -2,6 +2,10 @@
 /**
  * File: /dam-slideshow/includes/class-dam-slideshow.php
  */
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 class Dam_Slideshow {
     protected $loader;
     protected $plugin_name;
@@ -18,6 +22,13 @@ class Dam_Slideshow {
     }
 
     private function load_dependencies() {
+        // Include the loader class first
+        require_once DAM_SLIDESHOW_PLUGIN_DIR . 'includes/class-dam-slideshow-loader.php';
+        require_once DAM_SLIDESHOW_PLUGIN_DIR . 'includes/class-dam-slideshow-i18n.php';
+        require_once DAM_SLIDESHOW_PLUGIN_DIR . 'admin/class-dam-slideshow-admin.php';
+        require_once DAM_SLIDESHOW_PLUGIN_DIR . 'public/class-dam-slideshow-public.php';
+
+        // Create new instance of loader
         $this->loader = new Dam_Slideshow_Loader();
     }
 
@@ -31,7 +42,6 @@ class Dam_Slideshow {
         
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
-        $this->loader->add_action('init', $plugin_admin, 'register_gutenberg_block');
     }
 
     private function define_public_hooks() {
