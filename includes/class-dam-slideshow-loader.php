@@ -2,6 +2,10 @@
 /**
  * File: /dam-slideshow/includes/class-dam-slideshow-loader.php
  */
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 class Dam_Slideshow_Loader {
     protected $actions;
     protected $filters;
@@ -21,10 +25,10 @@ class Dam_Slideshow_Loader {
 
     private function add($hooks, $hook, $component, $callback, $priority, $accepted_args) {
         $hooks[] = array(
-            'hook' => $hook,
-            'component' => $component,
-            'callback' => $callback,
-            'priority' => $priority,
+            'hook'          => $hook,
+            'component'     => $component,
+            'callback'      => $callback,
+            'priority'      => $priority,
             'accepted_args' => $accepted_args
         );
         return $hooks;
@@ -34,6 +38,7 @@ class Dam_Slideshow_Loader {
         foreach ($this->filters as $hook) {
             add_filter($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
         }
+
         foreach ($this->actions as $hook) {
             add_action($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
         }
